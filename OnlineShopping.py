@@ -45,10 +45,11 @@ def add():
             'price': request.form['price'],
             'type': request.form['type'],
             'image': request.form['image']
+            
         }
         save_product(new_product)
         return redirect(url_for('index'))
     return render_template('add.html')
 
 if __name__ == '__main__':
-    app.run(debug=True)
+     app.run(host='127.0.0.1', port=5000)
